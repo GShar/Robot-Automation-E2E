@@ -5,9 +5,8 @@ It consists of different tests which are functional, end to end, UI and are run 
 and browser automation features provided by the Robot Selenium Library.
 
 ## Design Pattern Used
-I have used a pattern to the Page Objects Pattern as the pattern for designing the framework.
-I have replaced the page objects with the page keywords instead as Robot Framework uses keywords
-
+I have used a pattern to the Page Objects Pattern as the pattern for designing the framework.  
+I have replaced the page objects with the page keywords instead as Robot Framework uses keywords.  
 Please see the `Page_Keywords` folder within the root Folder `Robot_Automation_E2E`.
 
 It Contains the following Page Keywords Files:
@@ -21,7 +20,6 @@ I have used the advanced version of the Keyword pattern as the pattern for writi
 As an example please see : https://robotframework.org/?tab=0&example=Advanced%20Example#getting-started
 This design pattern is similar to BDD, and uses custom keywords which define the user behaviour.
 It is a bit more elaborative then the standard keywords provided by Robot Framework and are customised as per the Scenarios of the Website we are testing.
-
 
 ## Tools Used:
 - Python 3
@@ -45,8 +43,10 @@ https://docs.robotframework.org/docs/getting_started/ide
 ## Running Tests
 - Once you have set up the framework using the steps above
 - You should be able to run the test using the commands below :
-- `robot -d results .\Tests\NewCastle_FC\Login_Feature\Login_FunctionalTests.robot`
+- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> .\Tests\NewCastle_FC\Login_Feature\Login_FunctionalTests.robot`
 - Make sure that you are in the directory of the project folder which is `Robot_Automation-E2E`
+- Running a single test :
+- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> -t "User Is Able To Successfully Login Using Valid Username And Password" .\Tests\NewCastle_FC\Login_Feature\Login_Functional_Tests.robot`
 
 ## Logging and Reporting
 - The log file is available in the results folder with the name : `log.html`
