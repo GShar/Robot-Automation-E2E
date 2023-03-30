@@ -5,19 +5,22 @@ It consists of different tests which are functional, end to end, UI and are run 
 and browser automation features provided by the Robot Selenium Library.
 
 ## Design Pattern Used
-I have used the Page Objects Pattern as the pattern for designing the framework.
-The `Page Object` folder within the `Resources Folder`.
-It Contains the following Page Objects:
-- Login Page
-- Hudle Main Page
-- Home Page
+I have used a pattern to the Page Objects Pattern as the pattern for designing the framework.
+I have replaced the page objects with the page keywords instead as Robot Framework uses keywords
 
+Please see the `Page_Keywords` folder within the root Folder `Robot_Automation_E2E`.
+
+It Contains the following Page Keywords Files:
+
+- Login_Page_Keywords
+- Hudl_Main_Page_Keywords
+- Home_Page_Keywords
+- Common_Page_Keywords
 
 I have used the advanced version of the Keyword pattern as the pattern for writing the tests.
 As an example please see : https://robotframework.org/?tab=0&example=Advanced%20Example#getting-started
 This design pattern is similar to BDD, and uses custom keywords which define the user behaviour.
 It is a bit more elaborative then the standard keywords provided by Robot Framework and are customised as per the Scenarios of the Website we are testing.
-
 
 
 ## Tools Used:
