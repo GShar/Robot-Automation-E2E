@@ -6,7 +6,7 @@ Documentation    Hudl Login Feature End To End Test Cases
 Resource    ../../../Page_Object_Model/Pages/Login_Page/keywords.robot
 Resource    ../../../Resources/common.resource
 Resource    ../../../Page_Object_Model/Pages/Hudl_Main_Page/keywords.robot
-Test Setup    Open Browser To Main Hudle Website  
+Test Setup      
 Test Teardown    Close Browser
 
 *** Test Cases ***

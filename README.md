@@ -90,10 +90,10 @@ https://docs.robotframework.org/docs/getting_started/ide
 ## Running Tests
 - Once you have set up the framework using the steps above
 - You should be able to run the test using the commands below :
-- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> .\Tests\NewCastle_FC\Login_Feature\Login_FunctionalTests.robot`
+- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> -s "Functional_Tests" .\Tests\NewCastle_FC\Login_Feature\`
 - Make sure that you are in the directory of the project folder which is `Robot_Automation-E2E`
 - Running a single test :
-- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> -t "User Is Able To Successfully Login Using Valid Username And Password" .\Tests\NewCastle_FC\Login_Feature\Login_Functional_Tests.robot`
+- `robot -d results -v USERNAME:<Your Username> -v PASSWORD:<Your Password> -t "User Is Able To Use Back Button To Navigate To Previous Page" .\Tests\NewCastle_FC\Login_Feature\`
 
 ## Logging and Reporting
 - The log file is available in the results folder with the name : `log.html`

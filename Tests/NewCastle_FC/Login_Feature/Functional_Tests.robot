@@ -28,19 +28,4 @@ User Cannot Login Using Invalid Username And Valid Password
     Enter A Valid Password
     Submit Credentials
     Invalid Login Error Message Should be Displayed
-
-User Navigates To Sign Up Page Using Sign Up Link
-    [Tags]    regression
-    Click Sign Up Link
-    User Should Navigate to Sign Up Page
-
-User Should Be Able To Use The Help Link
-    [Tags]    regression
-    Click Help Link
-    User Should Navigate To Help Page
-
-User Is Able To Use Back Button To Navigate To Previous Page
-    [Tags]    regression
-    Go To Previous Page Using Back Icon
-    User Should Navigate To The Hudl Main Page
      

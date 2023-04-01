@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Example suite
+Documentation    Test suite for Login Tests
 Library    SeleniumLibrary
 Resource    ../../../Resources/config.robot
 Suite Setup    Open Chrome Browser
