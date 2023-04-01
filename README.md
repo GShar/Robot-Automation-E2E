@@ -1,34 +1,76 @@
 # Robot-Automation-E2E
-This UI automation testing framework is built using the Robot Framework.
-It is being used to automation test a Login Feature which is part of an existing website.
-It consists of different tests which are functional, end to end, UI and are run using the Chrome Browser 
+This UI automation testing framework is built using the Robot Framework.  
+It is being used to automation test a Login Feature which is part of an existing website.  
+It consists of different tests which are functional, end to end, UI and are run using the Chrome Browser.  
 and browser automation features provided by the Robot Selenium Library.
 
-## Design Pattern Used
-I have used a pattern to the Page Object Model as the pattern for designing the framework.  
-I have created the page objects with the page keywords as Robot Framework uses keywords which are written in its own langauge/DSL, called Robot.  
-Please see the `Page_Objects` folder within the root Folder `Robot_Automation_E2E\Page_Object_Model`.
+This Framework provides the following:
+- Runs test cases for login on chrome browser
+- Tests the Login Page and the login functionality.
+- A test suite with Functional, End to End, and UI Tests.
+- Generate Log File containing Log.
+- Generates Test report.
+- Generates Screenshotsfor failed tests.
 
-It Contains the following Page Locaters Files:
-
-- Login_Page_Locaters
-- Hudl_Main_Page_Locaters
-
-The Page files are in `Pages` folder within `Robot_Automation_E2E\Pages`
-- Login_Page_Keywords
-- Hudl_Main_Page_Keywords
-- Common_Page_Keywords
-
-I have used the advanced version of the Keyword pattern as the pattern for writing the tests.
-As an example please see : https://robotframework.org/?tab=0&example=Advanced%20Example#getting-started
-This design pattern is similar to BDD(except the Given When Then), and uses custom keywords which define the user behaviour.
-It is a bit more elaborative then the standard keywords provided by Robot Framework and are customised as per the Scenarios of the Website we are testing.
+Reasons for choosing
 
 ## Tools Used:
 - Python 3
 - Robot Framework
 - Selenium
 - Package Manager - Pip : https://pip.pypa.io/en/stable/
+
+## Design Pattern Used
+  I have used a pattern to the Page Object Model as the pattern for designing the framework.  
+  I have created the page objects with the page keywords as Robot Framework uses keywords which are written in its own langauge/DSL, called Robot.  
+  Please see the `Page_Objects` folder within the root Folder `Robot_Automation_E2E\Page_Object_Model`.
+
+  It Contains the following Page Locaters Files:
+
+  - Login_Page_Locaters
+  - Hudl_Main_Page_Locaters
+
+  The Page files are in `Pages` folder within `Robot_Automation_E2E\Pages`
+  - Login_Page_Keywords
+  - Hudl_Main_Page_Keywords
+  - Common_Page_Keywords
+
+I have used the advanced version of the Keyword pattern as the pattern for writing the tests.
+As an example please see : https://robotframework.org/?tab=0&example=Advanced%20Example#getting-started
+This design pattern is similar to BDD(except the Given When Then), and uses custom keywords which define the user behaviour.
+It is a bit more elaborative then the standard keywords provided by Robot Framework and are customised as per the Scenarios of the Website we are testing.
+
+## Folder Structure
+- Page Object Model  
+  - Page_Object_Model -> Page_Objects -> Hudl_Main_Page -> locaters.robot  
+  - Page_Object_Model -> Page_Objects -> Login_Page -> locaters.robot  
+      Page Object Folder contain pages which contain locaters for the UI elements on the respective pages in the `locaters.robot` file.  
+      This is similar to Page Elements file
+
+  - Page_Object_Model -> Pages -> Hudl_Main_Page -> keywords.robot
+  - Page_Object_Model -> Pages -> Login_Page -> keywords.robot
+      The Pages folder contains `keywords.robot` for keywords specific to the page. These our own customised keywords.  
+      They are using Robots Frameworks existing Built In Selenium keywords and extended them to provide more domain specific keywords.  
+      Please refer to:
+  https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#library-documentation-top
+
+- Resources  
+  - Resources -> common.resource  
+    This resource file is a file extension for files which contain the common keywords and variables used by the project.
+
+  - Resources -> config.robot  
+  - Tests -> NewCastle_FC -> Login_Feature -> `__init__.robot`.  
+      This file is the initialization file that robot framework recommends for create a test suite and must be present in the test suite folder.
+
+- Tests
+  - Tests -> NewCastle_FC -> Login_Feature -> End_To_End_Tests.robot  
+  - Tests -> NewCastle_FC -> Login_Feature -> Functional_Tests.robot  
+  - Tests -> NewCastle_FC -> Login_Feature -> UI_Functional_Tests.robot  
+
+  The Tests contain the NewCastle _FC, which is the name of the Product.  
+  At the second level the Login Feature folder represents the name of the Feature which we are testing.  
+  For Example:  
+  Tests -> `<Product Name>` -> `<Feature Name>` -> 
 
 ## Installation and setup  
 - Make Sure you have Python 3 installed and your PYTHONPATH variable is pointing to Scripts folder and python.exe(within your python path) 
