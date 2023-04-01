@@ -1,19 +1,13 @@
 *** Settings ***
 Library  SeleniumLibrary
-Library  ../utility.py
 Documentation  This is the page object file for the Main Hudle website page.
 ...            Contains the locater for the UI for this page.
-Resource  ../config.robot
-
-*** Variables ***
-${locater_select_login}=  data:qa-id:login-select
-${locater_login_hudl}=  data:qa-id:login-hudl
-${locater_usermenu}=  class:hui-globalusermenu
-${locater_logout_button}=  data:qa-id:webnav-usermenu-logout
+Resource  ../../Resources/config.robot
+Resource  ../../Page_Object_Model/Page_Objects/Hudl_Main_Page_Locaters.robot
 
 *** Keywords ***
 Open Browser To Main Hudle Website
-    Open Browser  ${BASE_URL}  ${BROWSER}
+    Open Browser  ${hudl_main_page_url}  ${browser}
     Maximize Browser Window
 
 Select Login Page Button
@@ -29,7 +23,3 @@ Logout From the Hudl Website
     Mouse Over  ${locater_usermenu}
     Wait Until Element Is Visible  ${locater_logout_button}
     Click Element  ${locater_logout_button}
-
-    
-    
-  
