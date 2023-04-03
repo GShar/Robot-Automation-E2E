@@ -2,7 +2,7 @@
 This UI automation testing framework is built using the Robot Framework.  
 It is being used to automation test a Login Feature which is part of an existing website.  
 It consists of different tests which are functional, end to end, UI and are run using the Chrome Browser.  
-and browser automation features provided by the Robot Selenium Library.
+It utilises browser automation features and keywords provided by the Robot Selenium Library.
 
 This Framework provides the following:
 - Runs test cases for login on chrome browser
@@ -12,7 +12,6 @@ This Framework provides the following:
 - Generates Test report.
 - Generates Screenshotsfor failed tests.
 
-Reasons for choosing
 
 ## Tools Used:
 - Python 3
